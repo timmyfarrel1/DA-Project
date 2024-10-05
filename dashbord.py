@@ -4,8 +4,8 @@ import seaborn as sns
 import streamlit as st
 sns.set(style='dark')
 
-day_df = pd.read_csv(r'C:\Users\Timmothy Farrel\Documents\Berkas Bangkit\Bangkit\Belajar\Belajar Analisis Data dengan Python\Projek Akhir\Tugas Projek Akhir\Projek\clean_day_df.csv')
-hour_df= pd.read_csv(r'C:\Users\Timmothy Farrel\Documents\Berkas Bangkit\Bangkit\Belajar\Belajar Analisis Data dengan Python\Projek Akhir\Tugas Projek Akhir\Projek\clean_hour_df.csv')
+day_df = pd.read_csv('clean_day_df.csv')  
+hour_df= pd.read_csv('clean_hour_df.csv')
 
 def create_byseason_avg_df (df):
     season_avg_df = df.groupby('Musim')['Total_Pengguna'].mean().reset_index()
